@@ -92,7 +92,7 @@ void nums(long unsigned int& l, float& f, double& d, char& c) {
   COUT << "Input a char: ";
   CIN >> strc;
 
-  if (SSTREAM(strc) >> c) {
+  if (SSTREAM(strc) >> c && strc.length() == 1) {
     COUT << "The char is " << c << ENDL;
   }
   else {
