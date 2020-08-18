@@ -17,6 +17,7 @@ Lab1aObjs := Lab1a.o
 
 Lab1a: $(Lab1aObjs)
 	$(PP) $(CXXFLAGS) -o Lab1a $(Lab1aObjs)
+	./Lab1a
 
 Lab1a.o: Lab1a.cpp
 	$(PP) $(CXXFLAGS) -c Lab1a.cpp
@@ -27,6 +28,7 @@ Lab1bObjs := Lab1b.o
 
 Lab1b: $(Lab1bObjs)
 	$(PP) $(PQCXX) -o Lab1b $(Lab1bObjs)
+	./Lab1b
 
 Lab1b.o: Lab1b.cpp
 	$(PP) $(PQCXX) -c Lab1b.cpp
@@ -37,6 +39,7 @@ Lab1cObjs := Lab1c.o
 
 Lab1c: $(Lab1cObjs)
 	$(PP) $(PQCXX) -o Lab1c $(Lab1cObjs)
+	./Lab1c
 
 Lab1c.o: Lab1c.cpp
 	$(PP) $(PQCXX) -c Lab1c.cpp

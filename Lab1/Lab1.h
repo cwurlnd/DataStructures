@@ -25,8 +25,10 @@
 bool chars(STRING example) {
   for (unsigned int i = 0; i < example.length(); ++i) {
     if (example[i] < '0' || example[i] > '9') {
-      if (example[i] == '-' && i != 0) {
-        return false;
+      if (example[i] == '-') {
+        if (i != 0) {
+          return false;
+        }
       }
       else if (example[i] != '.') {
         return false;    
@@ -90,7 +92,7 @@ void nums(long unsigned int& l, float& f, double& d, char& c) {
   COUT << "Input a char: ";
   CIN >> strc;
 
-  if (SSTREAM(strc) >> c) {
+  if (SSTREAM(strc) >> c && strc.length() == 1) {
     COUT << "The char is " << c << ENDL;
   }
   else {
