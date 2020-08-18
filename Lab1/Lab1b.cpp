@@ -15,7 +15,7 @@ struct Node{
     long unsigned int theLong;
     float theFloat;
     double theDbl;
-    char theChar
+    char theChar;
           
     // Constructor
     Node(long unsigned int longIn, float floatIn, double dblIn, char charIn) 
@@ -23,10 +23,11 @@ struct Node{
               
     // Struct methods
     void printVals() {
-      COUT << "Initial address of 'this': " << this << ENDL << ENDL;  
-      COUT << "Double:  " << this->theDbl << "\t at address " << &(this->theDbl) << ENDL;
-      COUT << "Float:  " << this->theFloat << "\t at address " << &(this->theFloat) << ENDL;
-      COUT << "Integer:  " << this->theInt << "\t at address " << &(this->theInt) << ENDL;
+      COUT << ENDL << "Initial address of 'this': " << this << ENDL << ENDL;  
+      COUT << "Long Unsigned Int:  " << this->theLong << " at address " << &(this->theLong) << ENDL;
+      COUT << "Float:  " << this->theFloat << " at address " << &(this->theFloat) << ENDL;
+      COUT << "Double:  " << this->theDbl << " at address " << &(this->theDbl) << ENDL;
+      COUT << "Char:  " << this->theChar << " at address " << &(this->theChar) << ENDL;
     }
 
     // Getters
@@ -68,7 +69,14 @@ struct Node{
 };
 
 int main() {
-  Node node1(insert here);
+  long unsigned int l;
+  float f;
+  double d;
+  char c;
+
+  nums(l, f, d, c);
+
+  Node node1(l, f, d, c);
 
   node1.printVals();
 
