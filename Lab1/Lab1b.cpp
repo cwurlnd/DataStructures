@@ -9,6 +9,8 @@
 
 #include "Lab1.h"
 
+
+// Creating the Node struct
 struct Node{
     
     // Struct Members

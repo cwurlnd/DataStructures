@@ -9,6 +9,8 @@
 
 #include "Lab1.h"
 
+
+// Creating the Node class
 class Node { 
     private:
       long unsigned int theLong;
