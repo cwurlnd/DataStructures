@@ -22,9 +22,15 @@
 #define CIN std::cin
 #define CERR std::cerr
 
+
+// Check the accuracy of floats, doubles, and ints to make sure of no chars
+
 bool chars(STRING example) {
+  // Loop through string
   for (unsigned int i = 0; i < example.length(); ++i) {
+    // Check for not numbers
     if (example[i] < '0' || example[i] > '9') {
+      // Check if valid
       if (example[i] == '-') {
         if (i != 0) {
           return false;

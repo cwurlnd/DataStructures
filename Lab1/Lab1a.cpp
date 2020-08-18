@@ -9,6 +9,8 @@
 
 #include "Lab1.h"
 
+
+// Use the allocated memory and assign the appropriate values to the memory
 void setNodeValues( void* reference, long unsigned int theLong, float theFlt, double theDbl, char theChar ){
     
   *((long unsigned int *)(reference)) = theLong;
@@ -24,6 +26,7 @@ void setNodeValues( void* reference, long unsigned int theLong, float theFlt, do
                        
 }
 
+// Print the addresses and values of each variable
 void printAddresses(void* ref) {
 
   COUT << ENDL << "Initial address of reference: " << ref << ENDL << ENDL;  
@@ -50,6 +53,7 @@ int main() {
 
   nums(l, f, d, c);
 
+  // Allocate memory for the variables
   long unsigned int nodeSize = sizeof(long unsigned int) + sizeof(float) + sizeof(double) + sizeof(char);
 
   void* node = malloc(nodeSize);
