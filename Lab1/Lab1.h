@@ -23,7 +23,7 @@
 #define CERR std::cerr
 
 bool chars(STRING example) {
-  for (int i = 0; i < example.length(); ++i) {
+  for (unsigned int i = 0; i < example.length(); ++i) {
     if (example[i] < '0' || example[i] > '9') {
       if (example[i] == '-' && i != 0) {
         return false;
@@ -36,19 +36,15 @@ bool chars(STRING example) {
   return true;
 }
 
-void nums() {
+void nums(long unsigned int& l, float& f, double& d, char& c) {
 
   STRING strl;
-  long unsigned int l;
 
   STRING strf;
-  float f;
 
   STRING strd;
-  double d;
 
   STRING strc;
-  char c;
 
   // Check the accuracy of an input of a long unsigned integer
 
@@ -56,7 +52,7 @@ void nums() {
   CIN >> strl;
 
   if(SSTREAM(strl) >> l && chars(strl) && strl.find(".") == STRING::npos) { 
-    COUT << "The long unsigned integer is " << l << ENDL;
+    COUT << "The long unsigned integer is " << l << ENDL; 
   }
   else {
     CERR << strl << " is not a valid long unsigned integer" << ENDL;
@@ -68,7 +64,7 @@ void nums() {
   COUT << "Input a float: ";
   CIN >> strf;
 
-  if(SSTREAM(strf) >> f && noBadChars(f)) {
+  if(SSTREAM(strf) >> f && chars(strf)) {
     COUT << "The float is " << f << ENDL;
   }
   else {
@@ -81,12 +77,13 @@ void nums() {
   COUT << "Input a double: ";
   CIN >> strd;
 
-  if(SSTREAM(strd) >> d && noBadChars(d)) {
+  if(SSTREAM(strd) >> d && chars(strd)) {
     COUT << "The double is " << d << ENDL;
   }
   else {
     CERR << strd << " is not a valid double" << ENDL;
     exit(-1);
+  }
 
   // Check the accuracy of an input of a char
   
@@ -102,4 +99,4 @@ void nums() {
   }
 }
 
-#ENDIF
+#endif

@@ -9,7 +9,7 @@
 
 #include "Lab1.h"
 
-class Node( 
+class Node { 
     private:
       long unsigned int theLong;
       float theFloat;
@@ -61,11 +61,17 @@ class Node(
 
         return output;
       }
-
-);
+};
 
 int main () {
-  Node node1(insert here);
+  long unsigned int l;
+  float f;
+  double d;
+  char c;
 
-  COUT << node1 << ENDL:
+  nums(l, f, d, c);
+
+  Node node1(l, f, d, c);
+
+  COUT << node1 << ENDL;
 }

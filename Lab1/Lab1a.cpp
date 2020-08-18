@@ -9,29 +9,58 @@
 
 #include "Lab1.h"
 
-void printAddresses(void* ref) {
-  COUT << "Initial address of reference: " << ref << ENDL << ENDL;  
+void setNodeValues( void* reference, long unsigned int theLong, float theFlt, double theDbl, char theChar ){
     
-  COUT << "Long Unsigned Int: " << *((long unsigned int *)(ref)) << "\t at address " << ref << ENDL;
+  *((long unsigned int *)(reference)) = theLong;
+
+  reference += sizeof(long unsigned int);
+  *((float *)(reference)) = theFlt;
+                
+  reference += sizeof(float);
+  *((double *)(reference)) = theDbl;
+
+  reference += sizeof(double);
+  *((char *)(reference)) = theChar;
+                       
+}
+
+void printAddresses(void* ref) {
+
+  COUT << ENDL << "Initial address of reference: " << ref << ENDL << ENDL;  
+    
+  COUT << "Long Unsigned Int: " << *((long unsigned int *)(ref)) << " at address " << ref << ENDL;
       
   ref += sizeof(long unsigned int);
-  COUT << "Float: " << *((float *)(ref)) << "\t at address " << ref << ENDL;
+  COUT << "Float: " << *((float *)(ref)) << " at address " << ref << ENDL;
           
   ref += sizeof(float);
-  COUT << "Double: " << *((double *)(ref)) << "\t at address " << ref << ENDL;
+  COUT << "Double\ " << *((double *)(ref)) << " at address " << ref << ENDL;
               
   ref += sizeof(double);
-  COUT << "Char: " << *((char *)(ref)) << "\t at address " << red << ENDL;
+  COUT << "Char: " << *((char *)(ref)) << " at address " << ref << ENDL;
                 
-  COUT << "Final address of reference: " << reference << ENDL;  
+  COUT << "Final address of reference: " << ref << ENDL;  
 }
 
 int main() {
-  long unsigned int space = sizeof(long unsigned int) + sizeof(float) + sizeof(double) + sizeof(char);
+  long unsigned int l;
+  float f;
+  double d;
+  char c;
 
-  void* node = malloc(space);
+  nums(l, f, d, c);
 
-  nums();
+  long unsigned int nodeSize = sizeof(long unsigned int) + sizeof(float) + sizeof(double) + sizeof(char);
+
+  void* node = malloc(nodeSize);
+
+  setNodeValues(node, l, f, d, c);
+
+  printAddresses(node);
 
   free(node);
+
+  return 0;
 }
+
+
