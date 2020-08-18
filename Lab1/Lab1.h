@@ -25,8 +25,10 @@
 bool chars(STRING example) {
   for (unsigned int i = 0; i < example.length(); ++i) {
     if (example[i] < '0' || example[i] > '9') {
-      if (example[i] == '-' && i != 0) {
-        return false;
+      if (example[i] == '-') {
+        if (i != 0) {
+          return false;
+        }
       }
       else if (example[i] != '.') {
         return false;    
