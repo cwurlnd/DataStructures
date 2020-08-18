@@ -53,6 +53,7 @@ int main() {
 
   nums(l, f, d, c);
 
+  // Allocate memory for the variables
   long unsigned int nodeSize = sizeof(long unsigned int) + sizeof(float) + sizeof(double) + sizeof(char);
 
   void* node = malloc(nodeSize);
