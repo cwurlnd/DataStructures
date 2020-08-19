@@ -59,7 +59,7 @@ class Node {
       // Friend operator
 
       friend std::ostream& operator<<(std::ostream& output, const Node& n) {
-        output << "Initial address of 'this': " << &n << "\n" << "\n" << "Long Unsigned Int:  " << n.theLong << "\t at address " << &(n.theLong) << "\n" << "Double:  " << n.theDbl << "\t at address " << &(n.theDbl) << "\n" << "Float:  " << n.theFloat << "\t at address " << &(n.theFloat) << "\n" << "Char:  " << n.theChar << "\t at address " << &(n.theChar);
+        output << "Initial address of 'this': " << &n << "\n" << "\n" << "Long Unsigned Int:  " << n.theLong << "\t at address " << &(n.theLong) << "\n" << "Double:  " << n.theDbl << "\t at address " << &(n.theDbl) << "\n" << "Float:  " << n.theFloat << "\t at address " << &(n.theFloat) << "\n" << "Char:  " << n.theChar << "\t at address " << (void *)&(n.theChar);
 
         return output;
       }

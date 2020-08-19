@@ -29,7 +29,7 @@ struct Node{
       COUT << "Long Unsigned Int:  " << this->theLong << " at address " << &(this->theLong) << ENDL;
       COUT << "Float:  " << this->theFloat << " at address " << &(this->theFloat) << ENDL;
       COUT << "Double:  " << this->theDbl << " at address " << &(this->theDbl) << ENDL;
-      COUT << "Char:  " << this->theChar << " at address " << &(this->theChar) << ENDL;
+      COUT << "Char:  " << this->theChar << " at address " << (void *)&(this->theChar) << ENDL;
     }
 
     // Getters
