@@ -23,19 +23,19 @@ class Node {
         : theLong( longIn ), theFloat( floatIn ), theDbl( dblIn ), theChar( charIn ) {}
 
       // Getters
-      long unsigned int getLong() {
+      long unsigned int getLong() const {
         return theLong;
       }
 
-      float getFloat() {
+      float getFloat() const {
         return theFloat;
       }
 
-      double getDouble() {
+      double getDouble() const {
         return theDbl;
       }
 
-      char getChar() {
+      char getChar() const {
         return theChar;
       }
 
