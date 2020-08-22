@@ -23,9 +23,22 @@ pascal.o: pascal.cpp pascal.h
 fundamental.o: fundamental.cpp pascal.h
 	$(PP) $(CXXFLAGS) -c fundamental.cpp
 
+# Fibonacci
+fibObjs := fibonacci.o fibTest.o
+
+creative: $(fibObjs)
+	$(PP) $(CXXFLAGS) -o creative $(fibObjs)
+	./creative
+
+fibonacci.o: fibonacci.cpp fibonacci.h
+	$(PP) $(CXXFLAGS) -c fibonacci.cpp
+
+fibTest.o: fibTest.cpp fibonacci.h
+	$(PP) $(CXXFLAGS) -c fibTest.cpp
+
 # Make all
-all: pascal
+all: pascal creative
 
 # Make clean
 clean:
-	rm -rf *.o pascal
+	rm -rf *.o pascal creative
