@@ -10,7 +10,7 @@
 #include "pascal.h"
 
 int main() {
-  pascal(3);
+  doWork();
 
   return 0;
 }

@@ -17,6 +17,8 @@
 #define CIN std::cin
 #define CERR std::cerr
 
-void pascal(int rows);
+int** makeTriangle(int rows);
+void printTriangle(int** triangle, int numRows);
+void doWork();
 
 #endif
