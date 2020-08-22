@@ -17,14 +17,28 @@ int** makeTriangle(int rows) {
   for (int i = 0; i < rows; ++i) {
     triangle[i] = (int *)malloc(sizeof(int) * (i+1));
     for (int j = 0; j <= i; ++ j) {
-      triangle[i][j] = 0;
+      if (i == 1 || i == 2 || j == 0 || j == i) {
+        triangle [i][j] = 1;
+        continue;
+      }
+      triangle[i][j] = triangle[i-1][j-1] + triangle[i-1][j];
     } 
-    COUT << ENDL;
   }
 
   return triangle;
 }
 
+void printTriangle(int** triangle) {
+  int numRows = ;
+  COUT << numRows << ENDL;
 
+  for (int i = 0; i < numRows; ++i) {
+    for (int j = 0; j <= i; ++ j) {
+      COUT << i << " <-- i " << j << "<--- j"; 
+      COUT << triangle[i][j] << " ";
+    } 
+    COUT << ENDL;
+  }
+}
 
 

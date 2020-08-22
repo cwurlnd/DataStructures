@@ -10,7 +10,8 @@
 #include "pascal.h"
 
 int main() {
-  pascal(3);
+  int** tri1 = makeTriangle(5);
+  printTriangle(tri1);
 
   return 0;
 }
