@@ -9,17 +9,22 @@
 
 #include "pascal.h"
 
-void pascal(int rows) {
+int** makeTriangle(int rows) {
   int** triangle = (int**)(malloc(rows * sizeof(int *)));
+
+  // Creating the triangle
 
   for (int i = 0; i < rows; ++i) {
     triangle[i] = (int *)malloc(sizeof(int) * (i+1));
     for (int j = 0; j <= i; ++ j) {
       triangle[i][j] = 0;
-      COUT << triangle[i][j] << " ";
     } 
     COUT << ENDL;
   }
 
-  free(triangle);
+  return triangle;
 }
+
+
+
+
