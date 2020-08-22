@@ -39,7 +39,7 @@ void printTriangle(int** triangle, int numRows) {
 }
 
 int getElement(int** triangle, int row, int col, int numRows) {
-  if ((row-1) >> numRows) {
+  if ((row) > numRows) {
     return -1;
   } 
   if (col > row) {
@@ -83,13 +83,12 @@ void doWork() {
 
     COUT << "Continue? [y/n]: ";
     CIN >> cont;
+    COUT << ENDL;
 
-    COUT << cont << ENDL;
-
-    if (cont != 'y' || cont != 'Y') {
+    if (cont != 'y' && cont != 'Y') {
       break;
     }
   }
 
-  COUT << ENDL << "Exiting the program..." << ENDL;
+  COUT << "Exiting the program..." << ENDL;
 }
