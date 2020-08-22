@@ -11,7 +11,7 @@
 
 int main() {
   int** tri1 = makeTriangle(5);
-  printTriangle(tri1);
+  printTriangle(tri1, 5);
 
   return 0;
 }

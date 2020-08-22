@@ -18,6 +18,6 @@
 #define CERR std::cerr
 
 int** makeTriangle(int rows);
-void printTriangle(int** triangle);
+void printTriangle(int** triangle, int numRows);
 
 #endif
