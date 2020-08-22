@@ -19,5 +19,6 @@
 
 int** makeTriangle(int rows);
 void printTriangle(int** triangle, int numRows);
+void doWork();
 
 #endif

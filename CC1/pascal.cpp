@@ -35,6 +35,7 @@ void printTriangle(int** triangle, int numRows) {
     } 
     COUT << ENDL;
   }
+  COUT << ENDL;
 }
 
 int getElement(int** triangle, int row, int col, int numRows) {
@@ -53,7 +54,7 @@ void doWork() {
   int element;
   char cont;
 
-  COUT << "How many levels do you want to calculte? "; 
+  COUT << "How many levels do you want to calculate? "; 
   CIN >> numRows;
   COUT << ENDL;
 
@@ -67,8 +68,7 @@ void doWork() {
 
   while(true) {
     COUT << "Enter a row and a column value to print [two numbers only]: ";
-    CIN >> row, col;
-    COUT << ENDL;
+    CIN >> row >> col;
     
     element = getElement(myTriangle, row, col, numRows);
     if (element == -1) {
@@ -83,7 +83,8 @@ void doWork() {
 
     COUT << "Continue? [y/n]: ";
     CIN >> cont;
-    COUT << ENDL;
+
+    COUT << cont << ENDL;
 
     if (cont != 'y' || cont != 'Y') {
       break;
