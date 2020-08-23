@@ -24,7 +24,7 @@ fundamental.o: fundamental.cpp pascal.h
 	$(PP) $(CXXFLAGS) -c fundamental.cpp
 
 # Fibonacci
-fibObjs := fibonacci.o fibTest.o
+fibObjs := fibonacci.o fibTest.o pascal.o
 
 creative: $(fibObjs)
 	$(PP) $(CXXFLAGS) -o creative $(fibObjs)
