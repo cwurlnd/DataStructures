@@ -11,8 +11,10 @@
 
 int main() {
   COUT << "For purposes of tests other than the four previously designed, experiment with Pascal's triangle here: " << ENDL;
+  // Use doWork() to create any desired triangle
   doWork();
 
+  // Ask if user wants to see the example tests
   COUT << "Would you like to see the four tests? [y/n] ";
   char input;
   CIN >> input; 
@@ -20,6 +22,7 @@ int main() {
     return 0;
   } 
   
+  // Example tests for two valid and invalid inputs
   COUT << "------TEST 1------" << ENDL;
   COUT << "Correct inputs, create a triangle of 5 rows, access position 3 1 and exit" << ENDL;
   doWork();

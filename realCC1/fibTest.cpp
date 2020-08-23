@@ -11,6 +11,7 @@
 #include "pascal.h"
 
 int main() {
+  // Test 1 that shows use of Pascal's with fibonacci and knuckles
   COUT << "------TEST 1------" << ENDL;
   COUT << "Create a triangle of 6 rows" << ENDL;
   doWork();
@@ -21,6 +22,7 @@ int main() {
   COUT << "This pattern is used by the human body to create knuckles" << ENDL;
   COUT << "The proportion of the four knuckles in your hand is 2 2 5 8. Pretty neat" << ENDL << ENDL;
 
+  // Ask if user wants to continue
   COUT << "Would you like to continue to test 2? [y/n] ";
   char input;
   CIN >> input;
@@ -28,6 +30,7 @@ int main() {
     return 0;
   }
 
+  // Test 2 that shows use of Pascal's with fibonacci and pianos
   COUT << "------TEST 2------" << ENDL;
   COUT << "Now create a triangle of 7 rows" << ENDL;
   doWork();
@@ -38,12 +41,14 @@ int main() {
   COUT << "In one octave, a piano has 5 black keys, 8 white keys, and 13 total" << ENDL;
   COUT << "Pretty neat" << ENDL << ENDL;
 
+  // Ask if user wants to continue
   COUT << "Would you like to continue to test 3? [y/n] ";
   CIN >> input;
   if (input != 'y' && input!= 'Y') {
     return 0;
   }
 
+  // Test 3 that shows use of Pascal's with fibonacci and miscellaneous things
   COUT << "------TEST 3------" << ENDL;
   COUT << "Try making a triangle with 10 rows" << ENDL;
   doWork();
@@ -55,12 +60,14 @@ int main() {
   COUT << "It is crazy to think that Pascals triangle relates to so many real life things" << ENDL;
   COUT << "Pretty neat" << ENDL << ENDL;
 
+  // Ask if user wants to continue
   COUT << "Would you like to continue to test 4? [y/n] ";
   CIN >> input;
   if (input != 'y' && input!= 'Y') {
     return 0;
   }
 
+  // Test 4 that shows use of Pascal's with fibonacci and cryptography
   COUT << "------TEST 4------" << ENDL;
   COUT << "Finally, we'll take a look at the use of Pascal's triangle and the fibonacci sequence in coding" << ENDL;
   COUT << "Make a triangle of any amount of rows" << ENDL;
