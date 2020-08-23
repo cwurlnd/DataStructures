@@ -15,8 +15,10 @@ int** makeTriangle(int rows) {
   // Creating the triangle
 
   for (int i = 0; i < rows; ++i) {
+    // Allocate each row
     triangle[i] = (int *)malloc(sizeof(int) * (i+1));
     for (int j = 0; j <= i; ++ j) {
+      // Fill in values for each number
       if (i == 0 || i == 1 || j == 0 || j == i) {
         triangle [i][j] = 1;
         continue;
@@ -29,8 +31,10 @@ int** makeTriangle(int rows) {
 }
 
 void printTriangle(int** triangle, int numRows) {
+  // Loop through triangle
   for (int i = 0; i < numRows; ++i) {
     for (int j = 0; j <= i; ++ j) {
+      // Print each value with space
       COUT << triangle[i][j] << " ";
     } 
     COUT << ENDL;
@@ -39,6 +43,7 @@ void printTriangle(int** triangle, int numRows) {
 }
 
 int getElement(int** triangle, int row, int col, int numRows) {
+  // Check if input is valid and return element if so
   if ((row) > numRows) {
     return -1;
   } 
@@ -58,14 +63,17 @@ void doWork() {
   CIN >> numRows;
   COUT << ENDL;
 
+  // Check for valid number of rows
   if(numRows < 1) {
     CERR << "Not a valid number of rows." << ENDL;
     exit(-1);
   }
 
+  // Create the triangle and print it
   int** myTriangle = makeTriangle(numRows);
   printTriangle(myTriangle, numRows);
 
+  // Ask user for a row and column to print until they want to exit
   while(true) {
     COUT << "Enter a row and a column value to print [two numbers only]: ";
     CIN >> row >> col;
@@ -81,6 +89,7 @@ void doWork() {
       COUT << element << ENDL;
     }
 
+    // Check if user wants to continue
     COUT << "Continue? [y/n]: ";
     CIN >> cont;
     COUT << ENDL;
@@ -90,6 +99,7 @@ void doWork() {
     }
   }
   
+  // Free the allocated memory
   for (int i = 0; i < numRows; ++i) {
     free(myTriangle[i]);
   }
