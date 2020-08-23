@@ -13,9 +13,9 @@ CXXFLAGS := -m64 -std=c++11 -Weffc++ $(FLAGS)
 # Pascal
 pascalObjs := pascal.o fundamental.o
 
-pascal: $(pascalObjs)
-	$(PP) $(CXXFLAGS) -o pascal $(pascalObjs)
-	./pascal
+fundamental: $(pascalObjs)
+	$(PP) $(CXXFLAGS) -o fundamental $(pascalObjs)
+	./fundamental
 
 pascal.o: pascal.cpp pascal.h
 	$(PP) $(CXXFLAGS) -c pascal.cpp
@@ -37,8 +37,8 @@ fibTest.o: fibTest.cpp fibonacci.h pascal.h
 	$(PP) $(CXXFLAGS) -c fibTest.cpp
 
 # Make all
-all: pascal creative
+all: fundamental creative
 
 # Make clean
 clean:
-	rm -rf *.o pascal creative
+	rm -rf *.o fundamental creative
