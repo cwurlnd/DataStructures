@@ -89,6 +89,12 @@ void doWork() {
       break;
     }
   }
+  
+  for (int i = 0; i < numRows; ++i) {
+    free(myTriangle[i]);
+  }
+
+  free(myTriangle);
 
   COUT << "Exiting the program..." << ENDL;
 }
