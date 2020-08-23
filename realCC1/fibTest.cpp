@@ -8,14 +8,13 @@
  ****************/
 
 #include "fibonacci.h"
-#include "pascal.h"
 
 int main() {
   COUT << "------TEST 1------" << ENDL;
   COUT << "Create a triangle of 6 rows" << ENDL;
   doWork();
   COUT << "Create sums out of the first 6 diagonals. Look something like this?" << ENDL;
-  fibonacci(6);
+  //fibonacci(6);
   COUT << "The diagonals of Pascal's triangle create the digits in the fibonacci sequence" << ENDL;
   COUT << "For this example, disregarding the first two 1s, we can see the patter of 2 3 5 8" << ENDL;
   COUT << "This pattern is used by the human body to create knuckles" << ENDL;
@@ -32,7 +31,7 @@ int main() {
   COUT << "Now create a triangle of 7 rows" << ENDL;
   doWork();
   COUT << "Do the diagonals add up to this?" << ENDL;
-  fibonacci(7);
+  //fibonacci(7);
   COUT << "Take a look at the last three numbers of the sequence: 5 8 13" << ENDL;
   COUT << "You have probably seen those numbers before if you've played piano" << ENDL;
   COUT << "In one octave, a piano has 5 black keys, 8 white keys, and 13 total" << ENDL;
@@ -48,7 +47,7 @@ int main() {
   COUT << "Try making a triangle with 10 rows" << ENDL;
   doWork();
   COUT << "Now let's take a look again at the fibonacci sequence, made by adding the diagonals" << ENDL;
-  fibonacci(10);
+  //fibonacci(10);
   COUT << "Starting with the 2, divide each number with the one before it" << ENDL;
   COUT << "You should consistently get a value around 1.618, the golden ratio" << ENDL;
   COUT << "The golden ratio is seen all around the world, from Mona Lisa to the pyramids of Egypt" << ENDL;
@@ -68,7 +67,7 @@ int main() {
   COUT << "Enter the same amount of rows here: ";
   int numRows;
   CIN >> numRows; 
-  fibonacci(numRows);
+  //fibonacci(numRows);
   COUT << "The fibonacci sequence has been used by cryptographers such as Agarwal to encode messages" << ENDL;
   COUT << "They use the fibonacci sequence to create a security key that allows messages to be unreadable without the key" << ENDL;
   COUT << "Not only is Pascal's triangle and the fibonacci sequence seen in nature but it is seen in our world of coding as well" << ENDL;

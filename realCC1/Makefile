@@ -30,10 +30,10 @@ creative: $(fibObjs)
 	$(PP) $(CXXFLAGS) -o creative $(fibObjs)
 	./creative
 
-fibonacci.o: fibonacci.cpp fibonacci.h pascal.h
+fibonacci.o: fibonacci.cpp fibonacci.h
 	$(PP) $(CXXFLAGS) -c fibonacci.cpp
 
-fibTest.o: fibTest.cpp fibonacci.h pascal.h
+fibTest.o: fibTest.cpp fibonacci.h
 	$(PP) $(CXXFLAGS) -c fibTest.cpp
 
 # Make all

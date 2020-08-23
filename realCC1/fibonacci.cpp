@@ -8,7 +8,6 @@
  **************/
 
 #include "fibonacci.h"
-#include "pascal.h"
 
 void fibonacci(int numRows) {
   int curr1 = 1;

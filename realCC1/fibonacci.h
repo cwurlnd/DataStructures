@@ -12,6 +12,7 @@
 #define FIB
 
 #include <iostream>
+#include "pascal.h"
 
 void fibonacci(int numRows);
 
