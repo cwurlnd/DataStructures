@@ -24,16 +24,16 @@ fundamental.o: fundamental.cpp pascal.h
 	$(PP) $(CXXFLAGS) -c fundamental.cpp
 
 # Fibonacci
-fibObjs := fibonacci.o fibTest.o
+fibObjs := fibonacci.o fibTest.o pascal.o
 
 creative: $(fibObjs)
 	$(PP) $(CXXFLAGS) -o creative $(fibObjs)
 	./creative
 
-fibonacci.o: fibonacci.cpp fibonacci.h
+fibonacci.o: fibonacci.cpp fibonacci.h pascal.h
 	$(PP) $(CXXFLAGS) -c fibonacci.cpp
 
-fibTest.o: fibTest.cpp fibonacci.h
+fibTest.o: fibTest.cpp fibonacci.h pascal.h
 	$(PP) $(CXXFLAGS) -c fibTest.cpp
 
 # Make all
