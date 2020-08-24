@@ -18,9 +18,9 @@ int main() {
   COUT << "Create sums out of the first 6 diagonals. Look something like this?" << ENDL;
   fibonacci(6);
   COUT << "The diagonals of Pascal's triangle create the digits in the fibonacci sequence" << ENDL;
-  COUT << "For this example, disregarding the first two 1s, we can see the patter of 2 3 5 8" << ENDL;
+  COUT << "For this example, disregarding the first two 1s, we can see the pattern of 2 3 5 8" << ENDL;
   COUT << "This pattern is used by the human body to create knuckles" << ENDL;
-  COUT << "The proportion of the four knuckles in your hand is 2 2 5 8. Pretty neat" << ENDL << ENDL;
+  COUT << "The proportion of the four knuckles in your hand is 2 3 5 8. Pretty neat" << ENDL << ENDL;
 
   // Ask if user wants to continue
   COUT << "Would you like to continue to test 2? [y/n] ";
