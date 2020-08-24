@@ -38,7 +38,7 @@ int main() {
   fibonacci(7);
   COUT << "Take a look at the last three numbers of the sequence: 5 8 13" << ENDL;
   COUT << "You have probably seen those numbers before if you've played piano" << ENDL;
-  COUT << "In one octave, a piano has 5 black keys, 8 white keys, and 13 total" << ENDL;
+  COUT << "In one octave, a piano has 5 black keys, 8 white keys, and 13 total, including the top and bottom" << ENDL;
   COUT << "Pretty neat" << ENDL << ENDL;
 
   // Ask if user wants to continue
