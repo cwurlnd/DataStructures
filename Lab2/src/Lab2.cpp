@@ -10,16 +10,6 @@
 #include "../include/functions.h"
 
 int main () {
-  // Empty Test
-  COUT << "-------------------------------" << ENDL;
-  std::vector<int> empty;
-  COUT << "Empty Array Test:" << ENDL;
-  COUT << "Array to test for LIS\t : ";
-  printArray(empty);
-  COUT << ENDL;
-  unsigned int result = findLong(empty);
-  COUT << "Result: " << result << ENDL;
-
   // Test 1
   COUT << "-------------------------------" << ENDL;
   std::vector<int> ex1{10, 9, 2, 5, 3, 7, 101, 18};
@@ -27,7 +17,7 @@ int main () {
   COUT << "Array to test for LIS\t : ";
   printArray(ex1);
   COUT << ENDL;
-  result = findLong(ex1);
+  unsigned int result = findLong(ex1);
   COUT << "Result: " << result << ENDL;
 
   // Test 2
@@ -52,7 +42,7 @@ int main () {
 
   // Test 4
   COUT << "-------------------------------" << ENDL;
-  std::vector<std::string> ex4{"Cheer,", "cheer", "for", "ol'", "Notre", "Dame"};
+  std::vector<std::string> ex4{"Data", "Structures", "is", "the", "best", "class"};
   COUT << "Fourth Test:" << ENDL;
   COUT << "Array to test for LIS\t : ";
   printArray(ex4);
@@ -62,12 +52,22 @@ int main () {
 
   // Test 5
   COUT << "-------------------------------" << ENDL;
-  std::vector<int> ex5{38, 26, 38, 41, 12, 7, 22, 19, 35, 37, 48, 7, 29, 11, 47, 30, 35, 22, 27, 24, 47, 34, 36, 0, 14};
+  std::vector<int> ex5{20, 12, 34, 36, 1, 0, 16, 42, 13, 14, 29, 18, 22, 37, 7, 25};
   COUT << "Fifth Test:" << ENDL;
   COUT << "Array to test for LIS\t : ";
   printArray(ex5);
   COUT << ENDL;
   result = findLong(ex5);
+  COUT << "Result: " << result << ENDL;
+
+  // Test 6
+  COUT << "-------------------------------" << ENDL;
+  std::vector<char> ex6{'Q', 'u', 'i', 'c', 'k', 'b', 'r', 'o', 'w', 'n', 'f', 'o', 'x'};
+  COUT << "Sixth Test:" << ENDL;
+  COUT << "Array to test for LIS\t : ";
+  printArray(ex6);
+  COUT << ENDL;
+  result = findLong(ex6);
   COUT << "Result: " << result << ENDL;
 
   return 0;

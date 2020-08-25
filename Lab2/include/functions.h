@@ -40,10 +40,6 @@ unsigned int findLong(const std::vector<T>& array) {
     }
   }
 
-  for (unsigned int i = 0; i < array.size(); ++i) {
-    COUT << temp[i] << " ";
-  }
-
   unsigned int size = (unsigned int)temp.size();
   return size;
 }
