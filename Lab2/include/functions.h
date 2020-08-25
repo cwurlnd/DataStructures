@@ -19,6 +19,10 @@
 
 template <class T>
 unsigned int findLong(const std::vector<T>& array) {
+  if (array.size() == 0) {
+    return 0;
+  }
+
   std::vector<T> temp;
   for (unsigned int i = 0; i < array.size(); ++i) {
     if (i == 0) {
@@ -36,12 +40,20 @@ unsigned int findLong(const std::vector<T>& array) {
     }
   }
 
+  for (unsigned int i = 0; i < array.size(); ++i) {
+    COUT << temp[i] << " ";
+  }
+
   unsigned int size = (unsigned int)temp.size();
   return size;
 }
 
 template <class T>
 void printArray(const std::vector<T>& array) {
+  if (array.size() == 0) {
+    return;
+  }
+
   for (unsigned int i = 0; i < array.size(); ++i) {
     COUT << array[i] << " ";
   }
