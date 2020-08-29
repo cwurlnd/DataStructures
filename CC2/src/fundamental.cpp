@@ -18,6 +18,7 @@ int main() {
   COUT << "Inital is: ";
   printArray(ex1);
   COUT << ENDL;
+  // Shuffle the array for quick sort
   std::random_shuffle(ex1.begin(), ex1.end());
   sort(ex1, 0, (int)ex1.size() - 1);
   COUT << "Final is: ";
@@ -31,6 +32,7 @@ int main() {
   COUT << "Inital is: ";
   printArray(ex2);
   COUT << ENDL;
+  // Shuffle the array for quick sort
   std::random_shuffle(ex2.begin(), ex2.end());
   sort(ex2, 0, (int)ex2.size() - 1);
   COUT << "Final is: ";
@@ -44,6 +46,7 @@ int main() {
   COUT << "Inital is: ";
   printArray(ex3);
   COUT << ENDL;
+  // Shuffle the array for quick sort
   std::random_shuffle(ex3.begin(), ex3.end());
   sort(ex3, 0, (int)ex3.size() - 1);
   COUT << "Final is: ";
@@ -57,6 +60,7 @@ int main() {
   COUT << "Inital is: ";
   printArray(ex4);
   COUT << ENDL;
+  // Shuffle the array for quick sort
   std::random_shuffle(ex4.begin(), ex4.end());
   sort(ex4, 0, (int)ex4.size() - 1);
   COUT << "Final is: ";
@@ -70,6 +74,7 @@ int main() {
   COUT << "Inital is: ";
   printArray(ex5);
   COUT << ENDL;
+  // Shuffle the array for quick sort
   std::random_shuffle(ex5.begin(), ex5.end());
   sort(ex5, 0, (int)ex5.size() - 1);
   COUT << "Final is: ";
