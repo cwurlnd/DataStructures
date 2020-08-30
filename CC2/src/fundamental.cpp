@@ -10,7 +10,6 @@
 #include "../include/quick.h"
 
 int main() {
-  std::srand(unsigned(std::time(0)));
   // Test 1
   COUT << "-----------------------------" << ENDL;
   std::vector<char> ex1{'T', 'H', 'E', 'C', 'O', 'R', 'O', 'N', 'A', 'V', 'I', 'R', 'U', 'S', 'S', 'U', 'C', 'K', 'S'};
