@@ -5,6 +5,9 @@
  *
  * This file contains the function declarations for
  * The Quick Sort application
+ * Ideas for code and implementation come from
+ * provided YouTube video on challenge page:
+ * https://www.youtube.com/watch?v=x2LEyLvW0Lw
  **************/
 
 #ifndef CC2
