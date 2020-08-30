@@ -11,12 +11,13 @@
 #define COM
 
 #include "quick.h"
+#include <ctime>
 
 #define CIN std::cin
 #define CERR std::cerr
 
 std::vector<int> commercialInt (char input) {
-  std::srand((unsigned)std::time(0));
+  std::srand(unsigned(std::time(0)));
   int randNum;
   std::vector<int> data;
  
