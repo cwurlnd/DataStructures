@@ -34,22 +34,23 @@ bool findAna(std::string s, std::string t) {
 
   // Adding each char in the string to a hash table
   for (long unsigned int i = 0; i < s.length(); ++i) {
-    theHash.insert({s[i], i});
+    if (theHash.count(s[i]) != 0) {
+      theHash[s[i]] = theHash[s[i]] + 1;
+      continue;
+    }
+    theHash.insert({s[i], 1});
   }
 
   for (long unsigned int i = 0; i < t.length(); ++i) {
-    COUT << "i is " << i << ENDL;
     if (theHash.count(t[i]) != 0) {
-      COUT << "Before: ";
-      printHash(theHash);
-      COUT << ENDL;
-      theHash.erase(t[i]);
-      COUT << "After: ";
-      printHash(theHash);
-      COUT << ENDL;
+      if (theHash[t[i]] > 1) { 
+        theHash[s[i]] = theHash[s[i]] - 1;
+      }
+      else {
+        theHash.erase(t[i]);
+      }
     }
     else {
-      COUT << "yep" << ENDL;
       return false;
     }
   }
