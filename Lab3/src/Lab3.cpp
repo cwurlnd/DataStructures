@@ -13,10 +13,13 @@ int main() {
 
   // Test 1 - short and anagram
   COUT << "----------------------" << ENDL;
+  // Declare each string
   std::string s = "anagram";
   std::string t = "nagaram";
+  // Test for anagram
   bool result = findAna(s, t);
   COUT << "s = " << s << " t = " << t << ENDL;
+  // Print result in a meaningful way
   if (result) {
     COUT << "Result: true" << ENDL;
   }
