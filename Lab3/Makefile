@@ -14,12 +14,12 @@ SRC := src
 OBJ := obj
 EXE := exe
 
-# Command: make anagram
+# Command: make Lab3
 anagramObjs := $(OBJ)/anagram.o
 
-anagram: $(anagramObjs)
-	$(PP) $(CXXFLAGS) -o $(EXE)/anagram $(anagramObjs)
-	$(EXE)/./anagram
+Lab3: $(anagramObjs)
+	$(PP) $(CXXFLAGS) -o $(EXE)/Lab3 $(anagramObjs)
+	$(EXE)/./Lab3
 
 $(OBJ)/anagram.o: $(SRC)/Lab3.cpp $(INC)/Anagram.h
 	$(PP) $(CXXFLAGS) -c $(SRC)/Lab3.cpp -o $@
@@ -29,7 +29,7 @@ initialize:
 	mkdir $(OBJ) $(EXE)
 
 # Command: make all
-all: anagram
+all: Lab3
 
 # Command: make clean
 clean:
