@@ -17,22 +17,26 @@ class DoubleHash : public HashTable<Key, Value> {
 
   private:
 
+    // Hash Function 2 for ints
     long unsigned int HashFunc2( const int& keyToTranslate ) const{   
       return (3 - this->HashFunc(keyToTranslate) % 3);
     }
    
+    // Hash Function 2 for strings
     long unsigned int HashFunc2( const std::string& keyToTranslate ) const{  
       return (3 - this->HashFunc(keyToTranslate) % 3);
     }
 
+    // New findPos function for DoubleHash
     long unsigned int findPos( const Key& theKey ) const{
       
       long unsigned int currentPos;
+      // Set iter to 1
       long unsigned int iter = 1;
       const long unsigned int STEPSIZE = HashFunc2( theKey );
       
       do{
-        // Hash Function determines current position
+        // New Hash function to find the bucket
         currentPos = (this->HashFunc( theKey ) + iter*STEPSIZE) % this->array.capacity();
         ++iter;
       }
@@ -65,6 +69,8 @@ class DoubleHash : public HashTable<Key, Value> {
       // Do nothing
     }
   
+    // Rewrite friend operator since friend methods need to be rewritten in
+    // derived classes
     friend std::ostream& operator<<( std::ostream& output, const DoubleHash<Key, Value>& theTable ){
       
       output << "Hash Table Size: " << theTable.array.size() << std::endl;
