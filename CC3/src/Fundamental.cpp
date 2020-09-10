@@ -117,7 +117,7 @@ void test4 () {
   firstHash.insert( { 10, "Sixth"} );
   firstHash.insert( { 18, "Seventh"} );
   firstHash.insert( { 44, "Eighth"} );
-  firstHash.insert( { 44, "Ninth"} );
+  firstHash.insert( { 64, "Ninth"} );
 
   COUT << "Linear Hash Results:" << ENDL;
 
@@ -133,7 +133,7 @@ void test4 () {
   firstDouble.insert( { 10, "Sixth"} );
   firstDouble.insert( { 18, "Seventh"} );
   firstDouble.insert( { 44, "Eighth"} );
-  firstDouble.insert( { 44, "Ninth"} );
+  firstDouble.insert( { 64, "Ninth"} );
 
   COUT << "Double Hash Results:" << ENDL;
 
