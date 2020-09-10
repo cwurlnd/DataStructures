@@ -1,6 +1,6 @@
 # Author: Corey Wurl
 # NDID: 902091236
-# This is a makefile for CC3
+# This is a makefile for Lab3
 
 # GCC compiler for C++
 PP := g++
@@ -9,39 +9,27 @@ PP := g++
 FLAGS := -O0 -g -Wall -Wextra -Wconversion -Wshadow -pedantic -Werror 
 CXXFLAGS := -m64 -std=c++11 -Weffc++ $(FLAGS) 
 
-CLASSES := classes
-PROGRAMS := programs
+INC := include
+SRC := src
 OBJ := obj
 EXE := exe
 
-# Command: make linear
-linearObjs := $(OBJ)/linear.o
+# Command: make fundamental
+linearObjs := $(OBJ)/double.o
 
-linear: $(linearObjs)
-	$(PP) $(CXXFLAGS) -o $(EXE)/linear $(linearObjs)
-	$(EXE)/./linear
+fundamental: $(linearObjs)
+	$(PP) $(CXXFLAGS) -o $(EXE)/fundamental $(linearObjs)
+	$(EXE)/./fundamental
 
-$(OBJ)/linear.o: $(PROGRAMS)/Fundamental.cpp $(CLASSES)/LinearProbe.h
-	$(PP) $(CXXFLAGS) -c $(PROGRAMS)/Fundamental.cpp -o $@
-
-
-# Command: make double
-doubleObjs := $(OBJ)/linear.o $(OBJ)/double.o
-
-double: $(doubleObjs)
-	$(PP) $(CXXFLAGS) -o $(EXE)/double $(doubleObjs)
-	$(EXE)/./double
-
-$(OBJ)/double.o: $(PROGRAMS)/Fundamental.cpp $(CLASSES)/DoubleHash.h $(CLASSES)/LinearProbe.h 
-	$(PP) $(CXXFLAGS) -c $(PROGRAMS)/Fundamental.cpp -o $@
-
+$(OBJ)/double.o: $(SRC)/Fundamental.cpp $(INC)/DoubleHash.h $(INC)/LinearProbe.h
+	$(PP) $(CXXFLAGS) -c $(SRC)/Fundamental.cpp -o $@
 
 # Command: make initialize
 initialize: 
 	mkdir $(OBJ) $(EXE)
 
 # Command: make all
-all: linear double
+all: fundamental
 
 # Command: make clean
 clean:
