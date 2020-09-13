@@ -12,6 +12,8 @@
 
 #include "DoubleHash.h"
 
+#define CIN std::cin
+
 void grader() {
   std::string name;
   int grade;
@@ -20,8 +22,8 @@ void grader() {
 
   while (true) {
     COUT << "What would you like to do?" << ENDL;
-    COUT << "Enter a grade (e) / Change a grade (c) / Remove a grade (r) / Print grades (p) / Quit (q): "
-    CIN >> char;
+    COUT << "Enter a grade (e) / Change a grade (c) / Remove a grade (r) / Print grades (p) / Quit (q): ";
+    CIN >> input;
     COUT << ENDL;
 
     if (input == 'e') {
@@ -37,7 +39,6 @@ void grader() {
     
       COUT << "You have entered a grade of " << grade << " for " << name << ENDL;
     }
-
     else if (input == 'c') {
       COUT << "Please enter a student name: ";
       CIN >> name;
@@ -52,12 +53,11 @@ void grader() {
       CIN >> grade;
       COUT << ENDL;
 
-      int temp = table[name]
+      int temp = table[name];
       table[name] = grade;
 
       COUT << "The grade for " << name << " has been changed from " << temp << " to " << grade << ENDL;
     }
-
     else if (input == 'r') {
       COUT << "Please enter a student name: ";
       CIN >> name;
@@ -68,22 +68,22 @@ void grader() {
         continue;
       }
 
+      int temp2 = table[name];
       table.remove(name);
 
-      COUT << "The grade of " << grade << " for " << name << " has been removed" << ENDL;      
+      COUT << "The grade of " << temp2 << " for " << name << " has been removed" << ENDL;      
     }
-
     else if (input == 'p') {
       COUT << table << ENDL; 
     }
-
     else if (input == 'q') {
       break;
     }
-
     else {
       COUT << "Please enter a valid character" << ENDL;
     }
 
   }
 }
+
+#endif
