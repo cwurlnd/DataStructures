@@ -24,12 +24,24 @@ fundamental: $(linearObjs)
 $(OBJ)/double.o: $(SRC)/Fundamental.cpp $(INC)/DoubleHash.h $(INC)/LinearProbe.h
 	$(PP) $(CXXFLAGS) -c $(SRC)/Fundamental.cpp -o $@
 
+
+# Command: make creative
+creativeObjs := $(OBJ)/creative.o
+
+creative: $(creativeObjs)
+	$(PP) $(CXXFLAGS) -o $(EXE)/creative $(creativeObjs)
+	$(EXE)/./creative
+
+$(OBJ)/creative.o: $(SRC)/Creative.cpp $(INC)/DoubleHash.h $(INC)/LinearProbe.h $(INC)/Creative.h
+	$(PP) $(CXXFLAGS) -c $(SRC)/Creative.cpp -o $@
+
+
 # Command: make initialize
 initialize: 
 	mkdir $(OBJ) $(EXE)
 
 # Command: make all
-all: fundamental
+all: fundamental creative
 
 # Command: make clean
 clean:
