@@ -1,6 +1,6 @@
 # Author: Corey Wurl
 # NDID: 902091236
-# This is a makefile for Lab3
+# This is a makefile for CC3
 
 # GCC compiler for C++
 PP := g++
