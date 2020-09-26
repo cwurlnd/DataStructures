@@ -5,7 +5,8 @@
  *
  * This files contains the function definitions
  * used to solve the Pacific Atlantic problem
- *
+ * Referred to the following source:
+ * https://leetcode.com/problems/pacific-atlantic-water-flow/discuss/559058/C%2B%2B-bfs
  ************/
 
 #ifndef PACIFIC
@@ -42,7 +43,7 @@ void bfs(QUEUE<PAIR<int,int>>& q, VECTOR<VECTOR<bool>>& ocean, const VECTOR<VECT
         continue;
       }
       // Push to queue if it is a valid number/route in specific ocean
-      if (ocean[x][y] == false && matrix[x][y] >= matrix[i][j]) {
+      if (!(ocean[x][y]) && matrix[x][y] >= matrix[i][j]) {
                     ocean[x][y] = true;
                     q.push({x,y});
       }
