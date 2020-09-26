@@ -5,9 +5,9 @@
 # GCC compiler for C++
 PP := g++
 
-# Flags used 
-FLAGS := -O0 -g -Wall -Wextra -Wconversion -Wshadow -pedantic -Werror 
-CXXFLAGS := -m64 -std=c++11 -Weffc++ $(FLAGS) 
+# Flags used
+FLAGS := -O0 -g -Wall -Wextra -Wconversion -Wshadow -pedantic -Werror
+CXXFLAGS := -m64 -std=c++11 -Weffc++ $(FLAGS)
 
 INC := include
 SRC := src
@@ -24,12 +24,22 @@ Prob1: $(pacificObjs)
 $(OBJ)/pacific.o: $(SRC)/Prob1.cpp $(INC)/Pacific.h
 	$(PP) $(CXXFLAGS) -c $(SRC)/Prob1.cpp -o $@
 
+# Command: make Prob1
+rainObjs := $(OBJ)/rain.o
+
+Prob2: $(rainObjs)
+	$(PP) $(CXXFLAGS) -o $(EXE)/Prob2 $(rainObjs)
+	$(EXE)/./Prob2
+
+$(OBJ)/rain.o: $(SRC)/Prob2.cpp $(INC)/Rain.h
+	$(PP) $(CXXFLAGS) -c $(SRC)/Prob2.cpp -o $@
+
 # Command: make initialize
-initialize: 
+initialize:
 	mkdir $(OBJ) $(EXE)
 
 # Command: make all
-all: Prob1
+all: Prob1 Prob2
 
 # Command: make clean
 clean:
