@@ -27,7 +27,7 @@ void test1() {
 void test2() {
   COUT << "-------------TEST 2---------------" << ENDL;
 
-  int arr[] = { 3, 0, 2, 0, 4 };
+  int arr[] = { 3, 0, 2, 0, 4, 1, 0, 3, 2, 1, 0, 3 };
 
   int n = (int)sizeof(arr) / (int)sizeof(arr[0]);
 
