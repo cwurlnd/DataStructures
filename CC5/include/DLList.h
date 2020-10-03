@@ -473,11 +473,9 @@ class DLList{
 			}
 			else{
 
-				node* prev =  NULL;
 				node* curr = head;
 
 				while (curr != NULL && curr -> data != searchVal){
-					prev = curr;
 					curr = curr -> next;
 				}
 

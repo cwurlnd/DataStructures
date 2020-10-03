@@ -10,16 +10,35 @@
 #include "../include/SorDLList.h"
 #include "../include/DLList.h"
 
+#define COUT std::cout
+#define ENDL std::endl
+#define CIN std::cin
+
 int main () {
-  //std::cout << "yesme" << std::endl;
+  int input;
+  SorDLList<int> theList;
 
-  SorDLList<int> strDLL;
+  COUT << "Please enter 10 integers, seperated by new line" << ENDL;
 
-  std::cout << "yes" << std::endl;
+  for (int i = 0; i < 10; ++i) {
+    CIN >> input;
+    theList.Insert(input);
+    COUT << theList << ENDL;
+  }
 
-	strDLL.Insert(1);
-  strDLL.Insert(3);
-  strDLL.Insert(2);
+  while (!theList.IsEmpty()) {
+    COUT << "Choose an integer to delete from the list" << ENDL;
+    CIN >> input;
 
-	std::cout << strDLL << std::endl;
+    if (!theList.contains(input)) {
+      COUT << "Please enter a valid integer in the list" << ENDL;
+      continue;
+    }
+    else {
+      theList.Delete(input);
+      COUT << theList << ENDL;
+    }
+  }
+
+  COUT << "You have deleted the entire list" << ENDL;
 }
