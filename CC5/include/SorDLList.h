@@ -30,10 +30,23 @@ class SorDLList : public DLList<T> {
         this->head = temp;
         this->tail = temp;
       }
+
       else
       {
         typename SorDLList<T>::node* prev = NULL;
         typename SorDLList<T>::node* curr = this->head;
+
+
+        if (value < curr->data) {
+          this->push_front(value);
+          return;
+          /*
+          curr->prev = temp;
+          this->head = temp;
+          this->head->next = curr;
+          this->head->prev = NULL;
+          */
+        }
 
         /* traverse the list until the end */
         while (curr != NULL && curr->data < value)
