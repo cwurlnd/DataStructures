@@ -14,7 +14,7 @@ SRC := src
 OBJ := obj
 EXE := exe
 
-# Command: make fundamental
+# Command: make SorDLLTest
 sorObjs := $(OBJ)/sor.o
 
 SorDLLTest: $(sorObjs)
@@ -25,7 +25,7 @@ $(OBJ)/sor.o: $(SRC)/SorDLLTest.cpp $(INC)/SorDLList.h $(INC)/DLList.h
 	$(PP) $(CXXFLAGS) -c $(SRC)/SorDLLTest.cpp -o $@
 
 
-# Command: make creative
+# Command: make PQTest
 priorityObjs := $(OBJ)/priority.o
 
 PQTest: $(priorityObjs)

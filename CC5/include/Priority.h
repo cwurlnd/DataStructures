@@ -6,7 +6,6 @@
  * This files contains the operators, constructors,
  * and more to create the Priortiy class
 *************/
-
 #ifndef PRIORITY
 #define PRIORITY
 
@@ -31,7 +30,7 @@ class Priority {
     ~Priority() {}
 
     // Copy constructor
-    Priority(const A<T>& copy) : value(copy.value), priority(copy.priority) {}
+    Priority(const Priority<T>& copy) : value(copy.value), priority(copy.priority) {}
 
     // Assignment operator
     Priority<T> operator=(const Priority<T>& assign) {
@@ -67,5 +66,7 @@ class Priority {
     bool operator==( const Priority<T>& rhs ) const{
     	return priority == rhs.priority;
     }
+
+};
 
 #endif
