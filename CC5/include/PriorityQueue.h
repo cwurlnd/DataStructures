@@ -3,12 +3,12 @@
 
 #include "DLList.h"
 
-template<class T>
+template <class U>
 class PriorityQueue{
 
   private:
 
-		SorDLList<T> list;
+		SorDLList<U> list;
 		unsigned int max_len;
 		unsigned int queueSize;
 
@@ -20,7 +20,7 @@ class PriorityQueue{
 		// Constructor with limited queue size
 		PriorityQueue(unsigned int max) : list(), max_len(max), queueSize( 0 ) {}
 
-		void push(T elem){
+		void push(U elem){
 
 			if(queueSize < max_len){
 
@@ -40,13 +40,13 @@ class PriorityQueue{
 			}
 		}
 
-		T front() const{
+		U front() const{
 
 			return list.front();
 
 		}
 
-		T back() const{
+		U back() const{
 
 			return list.back();
 
