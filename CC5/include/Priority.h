@@ -48,19 +48,19 @@ class Priority {
     }
 
     bool operator>=( const Priority<T>& rhs ) const{
-    	return priority < rhs.priority;
+    	return priority >= rhs.priority;
     }
 
     bool operator>( const Priority<T>& rhs ) const{
-    	return priority <= rhs.priority;
-    }
-
-    bool operator<=( const Priority<T>& rhs ) const{
     	return priority > rhs.priority;
     }
 
+    bool operator<=( const Priority<T>& rhs ) const{
+    	return priority <= rhs.priority;
+    }
+
     bool operator<( const Priority<T>& rhs ) const{
-    	return priority >= rhs.priority;
+    	return priority < rhs.priority;
     }
 
     bool operator==( const Priority<T>& rhs ) const{
