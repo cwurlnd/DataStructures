@@ -14,7 +14,7 @@
 #define COUT std::cout
 #define ENDL std::endl
 
-int main() {
+void test1() {
   Priority<std::string> one ("Cheering", 5);
   Priority<std::string> two ("The", 3);
   Priority<std::string> three ("Name", 7);
@@ -39,6 +39,45 @@ int main() {
   }
 
   COUT << "The queue is empty" << ENDL;
+}
+
+void test2() {
+  Priority<char> one ('y', 5);
+  Priority<char> two (' ', 6);
+  Priority<char> three ('u', 8);
+  Priority<char> four ('e', 4);
+  Priority<char> five ('C', 1);
+  Priority<char> six ('W', 7);
+  Priority<char> seven ('l', 10);
+  Priority<char> eight ('o', 2);
+  Priority<char> nine ('r', 9);
+  Priority<char> ten ('r', 3);
+
+  PriorityQueue<Priority<char>> theQueue;
+
+  theQueue.push(one);
+  theQueue.push(two);
+  theQueue.push(three);
+  theQueue.push(four);
+  theQueue.push(five);
+  theQueue.push(six);
+  theQueue.push(seven);
+  theQueue.push(eight);
+  theQueue.push(nine);
+  theQueue.push(ten);
+
+  while (!theQueue.empty()) {
+    COUT << theQueue.front() << ENDL;
+    theQueue.pop();
+  }
+
+  COUT << "The queue is empty" << ENDL;
+}
+
+int main() {
+  test1();
+
+  test2();
 
   return 0;
 }
