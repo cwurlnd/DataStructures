@@ -15,6 +15,7 @@
 #define ENDL std::endl
 
 void test1() {
+  // Create Priority instances
   Priority<std::string> one ("Cheering", 5);
   Priority<std::string> two ("The", 3);
   Priority<std::string> three ("Name", 7);
@@ -23,8 +24,10 @@ void test1() {
   Priority<std::string> six ("Her", 6);
   Priority<std::string> seven ("Up", 2);
 
+  // Create priority queue
   PriorityQueue<Priority<std::string>> theQueue;
 
+  // Push to queue
   theQueue.push(one);
   theQueue.push(two);
   theQueue.push(three);
@@ -33,6 +36,7 @@ void test1() {
   theQueue.push(six);
   theQueue.push(seven);
 
+  // Print and pop queue
   while (!theQueue.empty()) {
     COUT << theQueue.front() << ENDL;
     theQueue.pop();
@@ -42,6 +46,7 @@ void test1() {
 }
 
 void test2() {
+  // Create Priority instances
   Priority<char> one ('y', 5);
   Priority<char> two (' ', 6);
   Priority<char> three ('u', 8);
@@ -53,8 +58,10 @@ void test2() {
   Priority<char> nine ('r', 9);
   Priority<char> ten ('r', 3);
 
+  // Create priority queue
   PriorityQueue<Priority<char>> theQueue;
 
+  // Push to queue
   theQueue.push(one);
   theQueue.push(two);
   theQueue.push(three);
@@ -66,6 +73,7 @@ void test2() {
   theQueue.push(nine);
   theQueue.push(ten);
 
+  // Print and pop queue
   while (!theQueue.empty()) {
     COUT << theQueue.front() << ENDL;
     theQueue.pop();
@@ -75,8 +83,10 @@ void test2() {
 }
 
 int main() {
+  // Run test 1
   test1();
 
+  // Run test 2
   test2();
 
   return 0;

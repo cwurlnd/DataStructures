@@ -36,16 +36,10 @@ class SorDLList : public DLList<T> {
         typename SorDLList<T>::node* prev = NULL;
         typename SorDLList<T>::node* curr = this->head;
 
-
+        // Check if the value is the smallest in the list
         if (value < curr->data) {
           this->push_front(value);
           return;
-          /*
-          curr->prev = temp;
-          this->head = temp;
-          this->head->next = curr;
-          this->head->prev = NULL;
-          */
         }
 
         /* traverse the list until the end */

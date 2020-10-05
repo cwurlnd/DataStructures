@@ -20,16 +20,19 @@ int main () {
 
   COUT << "Please enter 10 integers, seperated by new line" << ENDL;
 
+  // Get input from user and add to list
   for (int i = 0; i < 10; ++i) {
     CIN >> input;
     theList.Insert(input);
     COUT << theList << ENDL;
   }
 
+  // Delete integers from list until empty
   while (!theList.IsEmpty()) {
     COUT << "Choose an integer to delete from the list" << ENDL;
     CIN >> input;
 
+    // Check for valid integer
     if (!theList.contains(input)) {
       COUT << "Please enter a valid integer in the list" << ENDL;
       continue;
