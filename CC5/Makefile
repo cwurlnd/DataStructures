@@ -35,13 +35,23 @@ PQTest: $(priorityObjs)
 $(OBJ)/priority.o: $(SRC)/PQTest.cpp $(INC)/SorDLList.h $(INC)/DLList.h $(INC)/Priority.h $(INC)/PriorityQueue.h
 	$(PP) $(CXXFLAGS) -c $(SRC)/PQTest.cpp -o $@
 
+# Command: make Creative
+creativeObjs := $(OBJ)/creative.o
+
+Creative: $(creativeObjs)
+	$(PP) $(CXXFLAGS) -o $(EXE)/Creative $(creativeObjs)
+	$(EXE)/./Creative
+
+$(OBJ)/creative.o: $(SRC)/Creative.cpp $(INC)/SorDLList.h $(INC)/DLList.h $(INC)/Priority.h $(INC)/PriorityQueue.h $(INC)/Creative.h
+	$(PP) $(CXXFLAGS) -c $(SRC)/Creative.cpp -o $@
+
 
 # Command: make initialize
 initialize:
 	mkdir $(OBJ) $(EXE)
 
 # Command: make all
-all: SorDLLTest PQTest
+all: SorDLLTest PQTest Creative
 
 # Command: make clean
 clean:
